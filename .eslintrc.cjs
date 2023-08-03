@@ -33,7 +33,7 @@ module.exports = {
 	],
 	rules: {
 		'import/newline-after-import': ['error', { count: 1 }],
-		'import/no-unresolved': ['error', { ignore: ['\\$app/', '\\$env/'] }],
+		'import/no-unresolved': ['error', { ignore: ['\\$app/', '\\$env/', '\\$lib/'] }],
 		'import/order': [
 			'warn',
 			{
