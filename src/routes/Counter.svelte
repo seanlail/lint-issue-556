@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	// purposely add comment to prevent bug
 	import { spring } from 'svelte/motion';
 
 	let count = 0;
@@ -6,6 +8,10 @@
 	const displayed_count = spring();
 	$: displayed_count.set(count);
 	$: offset = modulo($displayed_count, 1);
+
+	onMount(() => {
+		console.log('hello');
+	});
 
 	function modulo(n: number, m: number) {
 		// handle negative numbers
